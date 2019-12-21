@@ -7,8 +7,11 @@ import "./plugins/index";
 
 import "element-ui/lib/theme-chalk/index.css";
 import "./assets/css/main.css";
+import upload from "./utils/uploader";
 
 Vue.config.productionTip = false;
+
+Vue.use(upload);
 
 Vue.mixin({
   data() {

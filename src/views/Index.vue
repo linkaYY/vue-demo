@@ -1,5 +1,9 @@
 <template>
-  <div class="home"></div>
+  <div>
+    <button @click="uploadImage">上传图片</button>
+    <button @click="uploadVideo">视频</button>
+    <button @click="uploadDoc">上传文档</button>
+  </div>
 </template>
 
 <script>
@@ -13,12 +17,37 @@ export default {
     };
   },
   components: {},
-  methods: {}
+  methods: {
+    uploadImage() {
+      this.uploader.upload("image", {
+        multiple: true,
+        progress: function(value) {},
+        getFileInfo: function(info) {}
+      });
+    },
+    uploadVideo() {
+      this.uploader.upload("video", {
+        multiple: true,
+        progress: function(value) {},
+        getFileInfo: function(info) {}
+      });
+    },
+    uploadDoc() {
+      this.uploader.upload("doc", {
+        multiple: true,
+        progress: function(value) {},
+        getFileInfo: function(info) {}
+      });
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
 .home {
   position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: red;
 }
 .imgBox {
   width: 1366px;
