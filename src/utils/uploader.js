@@ -1,6 +1,6 @@
 /**
  * @description 文件上传封装组件
- * @author wanglingkai
+ * @author @github LinkaYY
  * @date 2019-12-21
  */
 
@@ -54,10 +54,10 @@ UploaderPlugin.componentContent = {
   methods: {
     /**
      * @description 文件上传method
-     * @param {*} type 上传文件类型
-     * @param {*} options 其他自定义选项
+     * @param {String} type 上传文件类型
+     * @param {Object} options 其他自定义选项
      * @returns Promise
-     * @how use this methos
+     * @HowUseThisMethod
      * 在需要上传文件的方法中
      * this.uploader.upload('image', {
      *   multiple: false,
